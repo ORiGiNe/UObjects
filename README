@@ -1,2 +1,6 @@
-DEPENDANCIES
-	- userspace-usb-serie
+Les UObjecs ont besoin du projet userspace-usb-serie pour communiquer avec l'arduino.
+
+Après le clone du dépôt, effectuer un « git submodule update ».
+
+Pour compiler les UObjects : « cd urbi && make ».
+« make run » lance le script main.u, « make interactive » lance une console urbi avec les UObjects chargés.
