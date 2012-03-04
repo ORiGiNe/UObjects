@@ -1,3 +1,3 @@
 [submodule "userspace-usb-serie"]
 	path = userspace-usb-serie
-	url = /home/erdnaxeli/robal/UObjects/userspace-usb-serie/
+	url = git://github.com/ORiGiNe/userspace-usb-serie.git
