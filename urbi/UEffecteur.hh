@@ -7,25 +7,24 @@
 #include <iostream>
 
 // include custom lib
-#include "Led.h"
+#include "Effecteur.h"
 #include "UGaop.hh"
 
 // A UObject wrapping a custom object. 
-class ULed : public urbi::UObject
+class UEffecteur : public urbi::UObject
 { 
 	public: 
 		// C++ contructor. 
 		// @param name  name given to the instance. 
-		ULed(const std::string& name);
-	        //~ULed();	
+		UEffecteur(const std::string& name);
+	        //~UEffecteur();	
 
 		// Urbi constructor. 
 		int init(int odid, UObject* g); 
 
-		void allume();
-		void eteint();
+		bool set(int valeur);
 
 	protected:
-		Led* led;
+		Effecteur* effecteur;
 }; 
 #endif // ! UTEST_HH 
