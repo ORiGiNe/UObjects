@@ -8,6 +8,7 @@ SOURCES = \
 	../userspace-usb-serie/pc/GaopProtocol.cpp \
 	UGaop.cpp \
 	../userspace-usb-serie/pc/Capteur.cpp \
+	../userspace-usb-serie/pc/Effecteur.cpp \
     UCapteur.cpp \
 	UEffecteur.cpp
 
