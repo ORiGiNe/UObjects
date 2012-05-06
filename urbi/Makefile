@@ -12,9 +12,9 @@ SOURCES = \
     UCapteur.cpp \
 	UEffecteur.cpp
 
-default: target
+default: $(TARGET)
 
-target: $(SOURCES)
+$(TARGET): $(SOURCES)
 	$(CC) $(INCLUDES) $(CFLAGS) $(SOURCES) -o $(TARGET)
 
 run: $(TARGET)
