@@ -1,0 +1,51 @@
+function ouvrir(servo,x) {
+	while| (servo.x != x) {
+		if (servo.x < x)
+			servo.x++
+		else
+			servo.x--;
+
+		servo.l.set(servo.x)
+	};
+}|;
+
+
+var g1 = UGaop.new("/dev/ttyACM1")|;
+var g2 = UGaop.new("/dev/ttyUSB0")|;
+var uson = UCapteur.new(4,g2)|;
+
+var job = Tag.new("job")|;
+var x = uson.get|;
+
+var servo = Object.clone;
+var servo.l = UEffecteur.new(2,g1);
+var servo.x = 90;
+
+g1.initialise|;
+g2.initialise|;
+
+loop {
+	var y = uson.get;
+
+	if (y > 0)
+		x = y;
+
+	echo(x);
+},
+
+at (x < 30)
+{
+	job.freeze;
+}
+onleave
+{
+	job.unfreeze;
+};
+
+job :
+{
+	loop {
+		ouvrir(servo,180);
+		ouvrir(servo,0);
+	}
+},
