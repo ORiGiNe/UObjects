@@ -1,6 +1,7 @@
 Les UObjecs ont besoin du projet userspace-usb-serie pour communiquer avec l'arduino.
-Après le clone du dépôt, effectuer un « git submodule init ».
-Ensuite, un petit « git pull origin master » dans le dossier userspaceUsbSerie pour le mettre à jour.
+Après le clone du dépôt, effectuer un « git submodule init && git submodule update ».
+
+Un petit « git pull origin master » dans le dossier userspaceUsbSerie le mettra à jour, mais il faudra comiter (dans le dépôts UObjects) pour enregistrer ce changement.
 
 Pour compiler les UObjects : « cd urbi && make ».
 « make run » lance le script main.u, « make interactive » lance une console urbi avec les UObjects chargés.
