@@ -1,6 +1,0 @@
-exemple avec un effecteur (servo moteur)
-niv arduino : associer odid avec addresse 
-vérifier le programme sur la panda
-coder le driver I2C
-implémenter les drivers des effecteurs (servos, asserv)
-
