@@ -10,17 +10,17 @@ UGaop::UGaop(const std::string& name) : urbi::UObject(name) {
 	UBindFunction(UGaop, init);
 }
 
-UGaop::~UGaop() {
+/*UGaop::~UGaop() {
 	delete g;
 	delete tblassoc;
-}
+}*/
  
 int UGaop::init(const char* device) {
 	// Bind the functions, i.e., declare them to the Urbi world
 	UBindFunction(UGaop, initialise);
 	UBindFunction(UGaop, add);
 	
-	g = new Gaop (device);
+	g = new PCGaop (device);
 	tblassoc = new AssocPeriphOdid;
 	return 0; 
 }
@@ -33,8 +33,4 @@ void UGaop::initialise() {
 
 void UGaop::add(Peripherique* p) {
 	tblassoc->add(p);
-}
-
-Gaop* UGaop::getGaop() {
-	return g;
 }

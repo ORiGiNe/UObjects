@@ -7,7 +7,9 @@
 #include <iostream>
 
 // include custom lib
-#include "GaopProtocol.h"
+#include "PCGaop.h"
+#include "Peripherique.h"
+#include "AssocPeriphOdid.h"
 
 // A UObject wrapping a custom object. 
 class UGaop : public urbi::UObject
@@ -16,7 +18,7 @@ class UGaop : public urbi::UObject
 		// C++ contructor. 
 		// @param name  name given to the instance. 
 		UGaop(const std::string& name);
-	        ~UGaop();	
+	        //~UGaop();	
 
 		// Urbi constructor. 
 		int init(const char* device); 
@@ -27,10 +29,8 @@ class UGaop : public urbi::UObject
 		// ajoute un périphérique à gérer
 		void add(Peripherique* p);
 
-		Gaop* getGaop();
-
 	protected:
-		Gaop* g;
+		PCGaop* g;
 		AssocPeriphOdid* tblassoc;
 }; 
 #endif // ! UGAOP_HH 
