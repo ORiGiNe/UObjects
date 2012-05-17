@@ -1,4 +1,5 @@
 [submodule "userspace-usb-serie"]
 	path = userspace-usb-serie
 	#url = git://github.com/ORiGiNe/userspace-usb-serie.git
-    url = https://ORiGiNe@github.com/ORiGiNe/userspace-usb-serie.git
+	#url = https://ORiGiNe@github.com/ORiGiNe/userspace-usb-serie.git
+	url = robot@169.254.150.42:~/git/userspace-usb-serie

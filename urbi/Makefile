@@ -3,12 +3,9 @@ INCLUDES = -I $${URBI_ROOT}/include -I ../userspace-usb-serie/commun -I ../users
 CFLAGS = -shared -fPIC -DIAmNotOnThePandaBoard=0
 TARGET = ULib.so
 SOURCES = \
-	../userspace-usb-serie/commun/Peripherique.cpp \
-	../userspace-usb-serie/commun/Commande.cpp \
-	../userspace-usb-serie/pc/GaopProtocol.cpp \
+	../userspace-usb-serie/commun/*.cpp \
+	../userspace-usb-serie/pc/*.cpp \
 	UGaop.cpp \
-	../userspace-usb-serie/pc/Capteur.cpp \
-	../userspace-usb-serie/pc/Effecteur.cpp \
     UCapteur.cpp \
 	UEffecteur.cpp
 
