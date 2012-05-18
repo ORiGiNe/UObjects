@@ -7,7 +7,8 @@ SOURCES = \
 	../userspace-usb-serie/pc/*.cpp \
 	UGaop.cpp \
     UCapteur.cpp \
-	UEffecteur.cpp
+	UEffecteur.cpp \
+	UAsserv.cpp
 
 default: $(TARGET)
 

@@ -1,4 +1,36 @@
-var g = UGaop.new("/dev/ttyACM0")|
-var l = ULed.new(0,g)|
-g.initialise|
-l.allume;
+var g = UGaop.new("/dev/ttyUSB0")|;
+var j1 = UCapteur.new(42,g)|;
+var j2 = UCapteur.new(43,g)|;
+
+g.initialise|;
+
+every (0.5s) {
+	echo(j1.get);
+	echo("t" + j2.get);
+};
+
+
+var t|;
+t = jack.get|;
+
+every (1s) {
+	t = jack.get;
+},
+
+yo:
+	every (1s) {
+		echo (t)
+	},
+
+var e = Event.new;
+echo("bite");
+
+at (t == 0) {
+	every (1s) {
+		echo ("start")
+	},
+};
+
+sleep(10s);
+echo("bouh");
+e!;
