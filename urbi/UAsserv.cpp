@@ -32,7 +32,7 @@ int UAsserv::avancer(int vitesse) {
 }
 
 void UAsserv::tourner(int angle) {
-	asserv->tourner(angle,0,0);
+  asserv->tourner(180*angle/50,0,0);
 }
 
 int UAsserv::arreter() {
